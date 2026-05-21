@@ -1,0 +1,9 @@
+<p>finance works!</p>
+@for (finances of finance; track $index) {
+  <div>
+    <span class="text-black text-2xl">
+      {{ finances.name }}
+      {{ finances.value | currency: 'USD' }}
+    </span>
+  </div>
+}

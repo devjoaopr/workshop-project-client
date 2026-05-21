@@ -9,9 +9,9 @@ import { FinanceDTO } from '../finance-dto/finance-dto';
 })
 export class Finance {
   private http = inject(HttpClient);
-  baseUrl = 'http://localhost:8081/finance/';
+  baseUrl = 'http://localhost:8081/finance';
 
   listAll(): Observable<FinanceDTO[]> {
-    return this.http.get<FinanceDTO[]>(this.baseUrl + 'get');
+    return this.http.get<FinanceDTO[]>(this.baseUrl + '/get');
   }
 }
