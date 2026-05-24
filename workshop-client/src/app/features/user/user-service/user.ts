@@ -8,20 +8,15 @@ import { ApiResponse } from '../../../core/models/api-response';
 @Injectable({
   providedIn: 'root',
 })
-export class User {}
-
-@Injectable({
-  providedIn: 'root',
-})
-export class Finance {
+export class UserService {
   private http = inject(HttpClient);
-  baseUrl = 'http://localhost:8081/users/new';
+  baseUrl = 'http://localhost:8081/users';
 
   new(UserData: UserDTO): Observable<ApiResponse<UserDTO[]>> {
     return this.http.post<ApiResponse<UserDTO[]>>(this.baseUrl + '/new', UserData);
   }
 
-  get(): Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl + '/get');
+  get(): Observable<UserDTO[]> {
+    return this.http.get<UserDTO[]>(this.baseUrl + '/get');
   }
 }
