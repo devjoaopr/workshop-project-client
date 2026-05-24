@@ -1,2 +1,45 @@
-<p class="text-black">user works!</p>
-testeeeeeeeeeeeeeee
+<div class="bg-linear-to-br from-black to-purple-900 w-screen h-screen flex flex-col">
+  <header class="text-5xl tracking-wider font-semibold text-white p-4 flex flex-col">
+    <span>
+  Bem Vindo !
+</span>
+    <span class="text-lg font-light tracking-tight text-gray-400">
+      Administre suas finanças de forma prática, Comece agora !
+</span>
+  </header>
+  <div class=" flex flex-col justify-center items-center h-full">
+<div class="border w-2/4 h-3/4 flex flex-col shadow-2xl border-gray-600 bg-black rounded-2xl ">
+  <header class="text-xl text-white flex flex-col p-4 font-thin tracking-tighter text-center">
+    Crie sua conta
+  </header>
+  <section class="flex flex-col gap-2 p-4">
+    <form [formGroup]="user" class="h-full flex flex-col gap-3">
+      <label for="name" class="w-full">
+        <span class="tracking-tight text-white text-xs uppercase">
+          Nome:
+        </span>
+        <input type="text" formControlName="name" class=" border rounded-xl p-2 border-gray-400 text-white w-full" placeholder="Digite seu nome...">
+      </label>
+      <label for="email"  class="w-full">
+        <span class="tracking-tight text-white text-xs uppercase" >
+          Email:
+        </span>
+        <input type="email" formControlName="email" class=" border rounded-xl p-2 border-gray-400 text-white w-full" placeholder="Digite seu e-mail... ">
+      </label>
+      <label for="password" class="w-full">
+        <span  class="tracking-tight text-white text-xs uppercase">
+          Agora a senha:
+        </span>
+      <input type="password" formControlName="password" class=" border rounded-xl p-2 border-gray-400 text-white w-full" placeholder="Agora digite sua senha... ">
+      </label>
+      <div class="w-full justify-center flex">
+
+        <button type="button" (click)="createUser()" [disabled]="!user.valid" class=" p-4 w-fit bg-purple-600 hover:bg-purple-800 transition duration-500 text-white font-semibold py-2 rounded-xl tracking-tighter cursor-pointer">Criar Conta</button>
+      </div>
+    </form>
+  </section>
+  <footer></footer>
+</div>
+
+  </div>
+</div>
