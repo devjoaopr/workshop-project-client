@@ -10,7 +10,7 @@ import { ApiResponse } from '../../../core/models/api-response';
 })
 export class UserService {
   private http = inject(HttpClient);
-  baseUrl = 'http://localhost:8081/users';
+  baseUrl = 'http://localhost:8081/api/users';
 
   new(UserData: UserDTO): Observable<ApiResponse<UserDTO[]>> {
     return this.http.post<ApiResponse<UserDTO[]>>(this.baseUrl + '/new', UserData);
