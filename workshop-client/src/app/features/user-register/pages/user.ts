@@ -18,21 +18,21 @@ export class User {
   user = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]],
-    name: ['', [Validators.required]],
+    username: ['', [Validators.required]],
+    role: ['ROLE_USER', [Validators.required]],
   });
 
   createUser() {
     if (this.user.valid) {
       this.uService.new(this.user.getRawValue()).subscribe({
         next: () => {
-          alert("Usuário criado com sucesso!");
-          this.router.navigate(['/homepage']);
+          alert('Usuário criado com sucesso!');
+          this.router.navigate(['/login']);
         },
         error: () => {
-          alert("Erro ao criar usuário");
+          alert('Erro ao criar usuário');
         },
-      }
-      );
+      });
     }
   }
 }

@@ -8,5 +8,12 @@ import { OnInit } from '@angular/core';
   styleUrl: './homepage.css',
 })
 export class Homepage implements OnInit {
-  ngOnInit(): void {}
+  isOpenSalaryModal = false;
+
+  ngOnInit(): void {
+    this.openAddSalaryModal();
+  }
+  openAddSalaryModal() {
+    this.isOpenSalaryModal = true;
+  }
 }

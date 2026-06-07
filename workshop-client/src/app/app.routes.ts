@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: Finance,
   },
   {
-    path: 'login',
+    path: 'register',
     component: User,
   },
     {

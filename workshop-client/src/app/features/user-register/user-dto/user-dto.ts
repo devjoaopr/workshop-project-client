@@ -1,5 +1,6 @@
 export interface UserDTO {
-  name: string | null | undefined;
+  username: string | null | undefined;
   email: string;
   password: string;
+  salary?: string;
 }
