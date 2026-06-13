@@ -1,10 +1,38 @@
 <div class="bg-linear-to-br from-black to-purple-900 w-screen h-screen flex flex-col">
-  <header class="text-5xl tracking-wider font-semibold text-white p-4 flex flex-col">
-      Bem Vindo de volta !
+  <header class="text-5xl tracking-tight font-semibold text-white p-4 flex flex-col">
+      Bem vindo de volta !
   </header>
   <div class="border flex justify-end items-center h-full p-4">
-    <div class="w-150 h-3/4 bg-white flex flex-col border rounded-2xl">
+    <div class="w-150 h-2/4 bg-white flex flex-col border rounded-2xl p-4">
+        <header class="flex justify-center items-center text-2xl font-semibold">
+          <span>
+            Fazer login
+          </span>
+        </header>
+        <main>
+          <form [formGroup]="login" class="h-full flex flex-col gap-3">
+            <label for="email"  class="w-full">
+              <span class="tracking-tight text-black text-xs uppercase" >
+                Email:
+              </span>
+              <input type="email" formControlName="usernameOrEmail" class=" border rounded-xl p-2 border-gray-400 text-black w-full" placeholder="Digite seu e-mail... ">
+            </label>
+            <label for="password" class="w-full">
+              <span  class="tracking-tight text-black text-xs uppercase">
+                Senha:
+              </span>
+            <input type="password" formControlName="password" class=" border rounded-xl p-2 border-gray-400 text-black w-full" placeholder="Digite sua senha... ">
+            </label>
 
+            <button
+            type="submit"
+            class="bg-linear-to-l from-purple-600 to-purple-800 hover:bg-purple-800 transition duration-500 text-white font-semibold py-2 rounded-xl tracking-tighter cursor-pointer w-fit p-4"
+            >
+          Log-in
+          </button>
+          </form>
+
+        </main>
     </div>
   </div>
 </div>
