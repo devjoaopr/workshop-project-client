@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import {  Validators } from '@angular/forms';
+import { Validators } from '@angular/forms';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth-service/auth.service';
+import { AuthService } from '../login-service/auth.service';
 import { authRequestDTO } from '../DTOs/auth-request-dto';
 
 @Component({
@@ -32,5 +32,8 @@ export class Login {
         },
       });
     }
+  }
+  goToRegister() {
+    this.router.navigate(['/register']);
   }
 }

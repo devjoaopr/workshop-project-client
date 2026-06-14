@@ -35,4 +35,7 @@ export class User {
       });
     }
   }
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
 }
