@@ -1,0 +1,44 @@
+<div class="bg-linear-to-br from-white to-green-800 w-screen h-screen flex flex-col">
+  <header class="text-5xl tracking-tight font-semibold text-black p-4 flex flex-col">
+      Bem vindo de volta !
+  </header>
+  <div class="flex justify-end items-center h-full p-4">
+    <div class="w-150 h-72 bg-white flex flex-col  rounded-2xl p-4">
+        <header class="flex justify-center items-center text-2xl font-semibold">
+          <span>
+            Fazer login
+          </span>
+        </header>
+        <main>
+          <form [formGroup]="login" class="h-full flex flex-col gap-3 ">
+            <label for="email"  class="w-full">
+              <span class="tracking-tight text-black text-xs uppercase" >
+                Email:
+              </span>
+              <input type="email" formControlName="usernameOrEmail" class=" border rounded-xl p-2 border-gray-400 text-black w-full" placeholder="Digite seu e-mail... ">
+            </label>
+            <label for="password" class="w-full">
+              <span  class="tracking-tight text-black text-xs uppercase">
+                Senha:
+              </span>
+            <input type="password" formControlName="password" class=" border rounded-xl p-2 border-gray-400 text-black w-full" placeholder="Digite sua senha... ">
+            </label>
+            <div class="w-full justify-center flex flex-col items-center">
+              <button
+              type="button"
+              class="bg-linear-to-l from-green-600 to-green-800 hover:bg-green-800 transition duration-500 text-white font-semibold py-2 rounded-xl tracking-tighter cursor-pointer w-fit p-4"
+              (click)="submit()"
+              >
+            Log-in
+            </button>
+            <span>
+              Ainda não tem uma conta?
+              <a (click)="goToRegister()" class="text-green-600 cursor-pointer hover:text-green-800 transition duration-500 hover:underline ">Criar Conta</a>
+            </span>
+            </div>
+          </form>
+
+        </main>
+    </div>
+  </div>
+</div>
